@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import './vars.css';
+
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-white);
+  color: var(--color-black);
+  margin: 0;
+}
+body > div {
+  overflow-x: hidden;
+}
+html,
+body,
+body > div,
+body > div > div {
+  height: 100%;
+}
+
+.hero {
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero::before {
+  height: 100%;
+  width: 100%;
+  content: '';
+  background: #000;
+  opacity: 0.5;
+}
+
+.hero h1 {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  left: 10%;
+  font-size: 8rem;
+  margin: 0;
+}
+.hero h1::before {
+  content: '';
+  height: 80%;
+  width: 120%;
+  background-color: rgba(177, 252, 114, 0.85098);
+  position: absolute;
+  margin-left: -10%;
+  opacity: 0.9;
+  z-index: -1;
+  transform: rotate(-5deg);
+}
+.hero h1 span {
+  font-size: 2rem;
+  display: block;
+  border-bottom: 0.25rem solid #b1fc72;
+}
+
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.box {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  position: relative;
+  background-attachment: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box div {
+  max-width: 900px;
+  font-size: 2rem;
+  padding: 2rem;
+  line-height: 1.25;
+  position: relative;
+}
+@media (min-width: 450px) {
+  .box div {
+    background: #b1fc72d9;
+  }
+}
+@media (max-width: 449px) {
+  h2 {
+    background: #b1fc72;
+  }
+}
+.box > div {
+  transform: rotate(-3deg);
+}
+.box > div div {
+  transform: rotate(3deg);
+  background: #b1fc72d9;
+  margin-bottom: 1rem;
+}
+.box_4 > div {
+  transform: rotate(3deg);
+}
+.box_4 > div div {
+  transform: rotate(-3deg);
+}
+
+.box_1 {
+  background-image: url('/imgs/2017_08_01_73_resize seb Gora.jpg');
+}
+.box_2 {
+  background-image: url('/imgs/2017_08_01_74_resize seb gora.jpg');
+  flex-direction: column;
+}
+@media (min-width: 450px) {
+  .box_2 {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+.box_2 div {
+  max-width: 45%;
+  margin: 2rem;
+  background: #b1fc72d9;
+}
+
+.box_3 {
+  background-image: url('/imgs/2017_08_01_76_resize seb gora.jpg');
+}
+
+.box_3 > div,
+.box_4 > div {
+  max-width: 650px;
+}
+
+.box_3 span,
+.box_6 span,
+.box_4 span {
+  display: block;
+  font-size: 1rem;
+}
+
+.box__cont--alt {
+  transform: rotate(6deg) !important;
+}
+@media (min-width: 450px) {
+  .box__cont--alt {
+    margin-left: 55% !important;
+  }
+}
+
+.box_4 {
+  background-image: url('/imgs/2017_08_01_100_resize seb gora.jpg');
+}
+.box_6 {
+  background-image: url('/imgs/2017_08_01_78_resize seb gora.jpg');
+}
+.box_5 {
+  background-image: url('/imgs/2017_08_01_97_resize seb gora.jpg');
+}
+
+.box_5 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  position: relative;
+  background-attachment: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box_5 > div {
+  max-width: 900px;
+  font-size: 2rem;
+  padding: 2rem;
+  line-height: 1.25;
+  position: relative;
+}
+@media (min-width: 450px) {
+  .box_5 > div {
+    background: #b1fc72d9;
+  }
+}
+.box_5 > div {
+  transform: rotate(3deg);
+}
+.box_5 > div > div {
+  transform: rotate(-3deg);
+}
+@media (min-width: 450px) {
+  .box_5 > div > div {
+    column-count: 2;
+  }
+}
+.box_5 > div div div {
+  background: #b1fc72d9;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  line-height: 1.25;
+}
+.box_3 span,
+.box_5 span {
+  display: block;
+  font-size: 1rem;
+}
