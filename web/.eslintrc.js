@@ -1,14 +1,20 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
-  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings'],
+  extends: [
+    'standard',
+    'standard-react',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:prettier/recommended',
+  ],
   rules: {
-    'react/prop-types': 0
+    'react/prop-types': 0,
   },
   settings: {
     react: {
       pragma: 'React',
-      version: '16.6.3'
-    }
-  }
-}
+      version: '16.6.3',
+    },
+  },
+};
