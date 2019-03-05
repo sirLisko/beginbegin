@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import './vars.css';
-
+* {
+  box-sizing: border-box;
+}
 html {
   font-family: 'Oswald', sans-serif;
   font-size: var(--font-base-size);
@@ -88,31 +90,43 @@ body > div > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 .box div {
   max-width: 900px;
   font-size: 2rem;
-  padding: 2rem;
   line-height: 1.25;
   position: relative;
 }
 @media (min-width: 450px) {
   .box div {
+    padding: 2rem;
     background: #b1fc72d9;
   }
+}
+h2 {
+  padding-left: 2rem;
 }
 @media (max-width: 449px) {
   h2 {
     background: #b1fc72;
   }
 }
-.box > div {
-  transform: rotate(-3deg);
+@media (min-width: 450px) {
+  .box > div {
+    transform: rotate(-3deg);
+  }
 }
 .box > div div {
   transform: rotate(3deg);
   background: #b1fc72d9;
   margin-bottom: 1rem;
+  padding: 2rem;
+}
+@media (max-width: 449px) {
+  .box_1 > div div {
+    transform: rotate(0);
+  }
 }
 .box_4 > div {
   transform: rotate(3deg);
@@ -136,11 +150,15 @@ body > div > div {
 }
 
 .box_2 div {
-  max-width: 45%;
   margin: 2rem;
   background: #b1fc72d9;
+  padding: 2rem;
 }
-
+@media (min-width: 450px) {
+  .box_2 div {
+    max-width: 45%;
+  }
+}
 .box_3 {
   background-image: url('/imgs/2017_08_01_76_resize seb gora.jpg');
 }
