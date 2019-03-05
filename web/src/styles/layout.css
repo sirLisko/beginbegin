@@ -13,20 +13,20 @@ body {
   color: var(--color-black);
   margin: 0;
 }
-body > div {
-  overflow-x: hidden;
-}
 html,
 body,
 body > div,
 body > div > div {
   height: 100%;
+  width: 100%;
 }
 
 .hero {
   min-height: 100%;
+  width: 100%;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .hero::before {
   height: 100%;
