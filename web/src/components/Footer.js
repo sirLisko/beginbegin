@@ -6,7 +6,10 @@ export default ({ title, subtitle }) => (
   <div className="box box_8">
     <div className={styles.footer}>
       <h2>Presented By</h2>
-      <img src="/imgs/parrabbola.png" />
+      <div className={styles.presented}>
+        <img src="/imgs/parrabbola.png" />
+        <img src="/imgs/logo.png" />
+      </div>
       <p>
         Photos by <b>Dawid Linkowski</b>, <b>Rachel Cole-Wilkin</b>,{' '}
         <b>Sebastian Gora</b>
