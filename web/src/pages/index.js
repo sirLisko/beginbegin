@@ -2,13 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import GraphQLErrorList from '../components/graphql-error-list';
 import SEO from '../components/seo';
-import { Element } from 'react-scroll';
 
 import Hero from '../components/Hero';
 import Header from '../components/Header';
 import Shows from '../components/Shows';
 import Reviews from '../components/Reviews';
 import Cast from '../components/Cast';
+import Contacts from '../components/Contacts';
 import '../styles/layout.css';
 
 export const query = graphql`
@@ -78,6 +78,7 @@ const IndexPage = props => {
       <Reviews reviews={reviews[0].node.snippet} />
       <Shows shows={shows.map(s => s.node)} />
       <Cast cast={cast[0].node} />
+      <Contacts />
     </>
   );
 };

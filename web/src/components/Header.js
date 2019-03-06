@@ -32,7 +32,14 @@ const Header = () => {
       <ul className={styles.links}>
         {links.map(l => (
           <li key={l.text}>
-            <Link activeClass="active" to={l.to} spy smooth duration={500}>
+            <Link
+              activeClass="active"
+              to={l.to}
+              hashSpy
+              spy
+              smooth
+              duration={500}
+            >
               {l.text}
             </Link>
           </li>

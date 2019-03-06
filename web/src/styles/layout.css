@@ -85,6 +85,10 @@ h2 {
   background-image: url('/imgs/2017_08_01_74_resize seb gora.jpg');
   flex-direction: column;
 }
+.box_7 {
+  background-image: url('/imgs/2044 Rachel Cole-Wilkin.jpg');
+  flex-direction: column;
+}
 @media (min-width: 450px) {
   .box_2 {
     justify-content: space-around;
