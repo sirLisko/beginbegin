@@ -42,6 +42,10 @@ function SEO({ description, lang, meta, keywords = [], title }) {
                 content: title,
               },
               {
+                property: 'og:image',
+                content: '/imgs/Dawid%20Linkowski%20DSCF4200.jpg',
+              },
+              {
                 property: 'og:description',
                 content: metaDescription,
               },
