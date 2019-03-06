@@ -2,7 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import GraphQLErrorList from '../components/graphql-error-list';
 import SEO from '../components/seo';
+import { Element } from 'react-scroll';
 
+import Hero from '../components/Hero';
+import Header from '../components/Header';
 import Shows from '../components/Shows';
 import Reviews from '../components/Reviews';
 import Cast from '../components/Cast';
@@ -57,6 +60,7 @@ const IndexPage = props => {
   const { allSanityShow: { edges: shows } = {} } = data || {};
   const { allSanityReview: { edges: reviews } = {} } = data || {};
   const { allSanityProduction: { edges: cast } = {} } = data || {};
+
   return (
     <>
       <SEO
@@ -64,21 +68,9 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <div className="hero">
-        <h1>
-          {site.title}
-          <span>{site.subtitle}</span>
-        </h1>
-        <video
-          playsInline="playsinline"
-          autoPlay="autoplay"
-          muted="muted"
-          loop="loop"
-        >
-          <source src="/hero.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="box box_1">
+      <Header />
+      <Hero {...site} />
+      <div id="projects" className="box box_1">
         <div>
           <div>{site.description}</div>
         </div>

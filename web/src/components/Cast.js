@@ -2,7 +2,7 @@ import React from 'react';
 
 export default ({ cast }) => (
   <>
-    <div className="box box_6">
+    <div id="cast" className="box box_6">
       <div>
         <h2>Production</h2>
         <div>
