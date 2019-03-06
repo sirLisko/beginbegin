@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { showBlock } from '../helpers/shows';
 import styles from './Hero.module.css';
 
-export default ({ title, subtitle }) => (
+export default ({ title, subtitle, nextShow }) => (
   <div className={styles.hero}>
     <video
       className={styles.video}
@@ -17,5 +18,11 @@ export default ({ title, subtitle }) => (
       {title}
       <span>{subtitle}</span>
     </h1>
+    {nextShow && (
+      <div className={styles.next}>
+        <h2>Next Show</h2>
+        {showBlock(nextShow)}
+      </div>
+    )}
   </div>
 );

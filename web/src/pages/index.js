@@ -9,6 +9,9 @@ import Shows from '../components/Shows';
 import Reviews from '../components/Reviews';
 import Cast from '../components/Cast';
 import Contacts from '../components/Contacts';
+import Footer from '../components/Footer';
+
+import { nextShow } from '../helpers/shows';
 import '../styles/layout.css';
 
 export const query = graphql`
@@ -57,9 +60,10 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site;
-  const { allSanityShow: { edges: shows } = {} } = data || {};
+  const { allSanityShow: { edges: showsNode } = {} } = data || {};
   const { allSanityReview: { edges: reviews } = {} } = data || {};
   const { allSanityProduction: { edges: cast } = {} } = data || {};
+  const shows = showsNode.map(s => s.node);
 
   return (
     <>
@@ -69,16 +73,17 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
       <Header />
-      <Hero {...site} />
+      <Hero {...site} nextShow={nextShow(shows)} />
       <div id="projects" className="box box_1">
         <div>
           <div>{site.description}</div>
         </div>
       </div>
       <Reviews reviews={reviews[0].node.snippet} />
-      <Shows shows={shows.map(s => s.node)} />
+      <Shows shows={shows} />
       <Cast cast={cast[0].node} />
       <Contacts />
+      <Footer />
     </>
   );
 };

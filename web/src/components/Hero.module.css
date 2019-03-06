@@ -53,3 +53,31 @@
     border-bottom: 0.25rem solid #b1fc72;
   }
 }
+
+.next {
+  position: absolute;
+  bottom: 5vh;
+  z-index: 100;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  font-size: 1.5rem;
+  & span {
+    display: block;
+  }
+  & h2 {
+    padding: 0;
+    margin-bottom: 0;
+    &:before {
+      content: '';
+      height: 120%;
+      width: 120%;
+      top: 0;
+      background-color: rgba(177, 252, 114, 0.85098);
+      position: absolute;
+      margin-left: -10%;
+      opacity: 0.9;
+      z-index: -1;
+      transform: rotate(-5deg);
+    }
+  }
+}

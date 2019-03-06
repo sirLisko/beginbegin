@@ -89,6 +89,14 @@ h2 {
   background-image: url('/imgs/2044 Rachel Cole-Wilkin.jpg');
   flex-direction: column;
 }
+.box_8 {
+  background-image: url('/imgs/Dawid Linkowski DSCF4200.jpg');
+  flex-direction: column;
+  position: relative;
+  & h2 {
+    padding-left: 0;
+  }
+}
 @media (min-width: 450px) {
   .box_2 {
     justify-content: space-around;
