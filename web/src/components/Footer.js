@@ -8,7 +8,9 @@ export default ({ title, subtitle }) => (
       <h2>Presented By</h2>
       <div className={styles.presented}>
         <img src="/imgs/parrabbola.png" />
-        <img src="/imgs/logo.png" />
+        <div className={styles.logo}>
+          <img src="/imgs/logo.png" />
+        </div>
       </div>
       <p>
         Photos by <b>Dawid Linkowski</b>, <b>Rachel Cole-Wilkin</b>,{' '}

@@ -15,6 +15,15 @@
     max-width: 250px;
   }
 }
+.logo {
+  background: rgba(255, 255, 255, 0.85098) !important;
+  padding: 0 0.5rem !important;
+  margin-top: 1rem;
+  & img {
+    background: rgba(255, 255, 255, 0.85098);
+    transform: rotate(-5deg);
+  }
+}
 .presented {
   background: none !important;
   display: flex;

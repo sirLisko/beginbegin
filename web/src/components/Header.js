@@ -6,11 +6,15 @@ import styles from './Header.module.css';
 
 const links = [
   {
-    to: 'projects',
-    text: 'Projects',
+    to: 'production',
+    text: 'Production',
   },
   {
     to: 'cast',
+    text: 'Cast',
+  },
+  {
+    to: 'about',
     text: 'About Us',
   },
   {
@@ -23,8 +27,8 @@ const Header = () => {
   return (
     <nav className={styles.navigation} role="navigation">
       <input id="menu-toggle" type="checkbox" />
-      <a onClick={scroll.scrollToTop}>
-        <img className={styles.logo} src="/imgs/logo.png" alt="logo" />
+      <a className={styles.logo} onClick={scroll.scrollToTop}>
+        <img src="/imgs/logo.png" alt="logo" />
       </a>
       <label className={styles.hamburger} htmlFor="menu-toggle">
         <span />

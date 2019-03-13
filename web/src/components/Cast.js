@@ -2,16 +2,16 @@ import React from 'react';
 
 export default ({ cast }) => (
   <>
-    <div id="cast" className="box box_6">
+    <div id="production" className="box box_6">
       <div>
         <h2>Production</h2>
         <div>
-          <span>Writer</span>
-          {cast.writer}
-        </div>
-        <div>
           <span>Director</span>
           {cast.director}
+        </div>
+        <div>
+          <span>Writer</span>
+          {cast.writer}
         </div>
         <div>
           <span>Costumes</span>
@@ -19,7 +19,7 @@ export default ({ cast }) => (
         </div>
       </div>
     </div>
-    <div className="box_5">
+    <div id="cast" className="box_5">
       <div>
         <h2>Cast</h2>
         <div>

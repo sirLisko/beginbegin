@@ -17,8 +17,16 @@
 }
 
 .logo {
-  width: 150px;
-  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85098);
+  padding: 0 0.5rem;
+  transform: rotate(5deg);
+
+  & img {
+    background: rgba(255, 255, 255, 0.85098);
+    width: 150px;
+    cursor: pointer;
+    transform: rotate(-5deg);
+  }
 }
 
 .hamburger {
