@@ -6,9 +6,9 @@ export default function Shows({ shows }) {
   return (
     <>
       <div className="box box_4">
-        <div>
+        <div className="rotate">
           <h2>Next shows</h2>
-          {nextShows(shows).map(show => showBlock(show))}
+          {nextShows(shows, 'rotate--alt').map(show => showBlock(show))}
         </div>
       </div>
       <div className="box box_3">

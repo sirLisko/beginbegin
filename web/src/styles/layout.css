@@ -60,46 +60,18 @@ h2 {
     transform: rotate(-3deg);
   }
 }
-.box > div div {
+.box > div > div {
   transform: rotate(3deg);
   background: #b1fc72d9;
   margin-bottom: 1rem;
   padding: 2rem;
 }
 @media (max-width: 449px) {
-  .box_1 > div div {
+  .box_1 > div > div {
     transform: rotate(0);
   }
 }
-.box_4 > div {
-  transform: rotate(3deg);
-}
-.box_4 > div div {
-  transform: rotate(-3deg);
-}
 
-.box_1 {
-  background-image: url('/imgs/2017_08_01_73_resize seb Gora.jpg');
-}
-.box_2 {
-  background-image: url('/imgs/2017_08_01_74_resize seb gora.jpg');
-  flex-direction: column;
-}
-.box_7 {
-  background-image: url('/imgs/2044 Rachel Cole-Wilkin.jpg');
-  flex-direction: column;
-}
-.box_9 {
-  background-image: url('/imgs/DSCF4168.jpg');
-}
-.box_8 {
-  background-image: url('/imgs/Dawid Linkowski DSCF4200.jpg');
-  flex-direction: column;
-  position: relative;
-  & h2 {
-    padding-left: 0;
-  }
-}
 .box_9__text {
   font-size: 1.25rem !important;
 }
@@ -120,9 +92,6 @@ h2 {
   .box_2 div {
     max-width: 45%;
   }
-}
-.box_3 {
-  background-image: url('/imgs/2017_08_01_76_resize seb gora.jpg');
 }
 
 .box_3 > div,
@@ -146,14 +115,39 @@ h2 {
   }
 }
 
+.box_1 {
+  background-image: url('/imgs/2017_08_01_73_resize seb Gora.jpg');
+}
+.box_2 {
+  background-image: url('/imgs/2017_08_01_74_resize seb gora.jpg');
+  flex-direction: column;
+}
+.box_3 {
+  background-image: url('/imgs/2017_08_01_76_resize seb gora.jpg');
+}
 .box_4 {
   background-image: url('/imgs/2017_08_01_100_resize seb gora.jpg');
+}
+.box_5 {
+  background-image: url('/imgs/2017_08_01_97_resize seb gora.jpg');
 }
 .box_6 {
   background-image: url('/imgs/2017_08_01_78_resize seb gora.jpg');
 }
-.box_5 {
-  background-image: url('/imgs/2017_08_01_97_resize seb gora.jpg');
+.box_7 {
+  background-image: url('/imgs/2044 Rachel Cole-Wilkin.jpg');
+  flex-direction: column;
+}
+.box_8 {
+  background-image: url('/imgs/Dawid Linkowski DSCF4200.jpg');
+  flex-direction: column;
+  position: relative;
+  & h2 {
+    padding-left: 0;
+  }
+}
+.box_9 {
+  background-image: url('/imgs/DSCF4168.jpg');
 }
 
 .box_5 {
@@ -180,10 +174,10 @@ h2 {
     background: #b1fc72d9;
   }
 }
-.box_5 > div {
+.rotate {
   transform: rotate(3deg);
 }
-.box_5 > div > div {
+.rotate--alt {
   transform: rotate(-3deg);
 }
 @media (min-width: 450px) {
@@ -201,4 +195,49 @@ h2 {
 .box_5 span {
   display: block;
   font-size: 1rem;
+}
+
+.modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  top: 0;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+  margin: 0;
+  padding: 2.5rem;
+  background-color: rgba(177, 252, 114, 0.85098);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  max-height: 100%;
+}
+.modal > div {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.modal__close {
+  position: fixed !important;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  padding: 0;
+  background: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.modal__close svg {
+  height: 10px;
+  width: 10px;
 }
