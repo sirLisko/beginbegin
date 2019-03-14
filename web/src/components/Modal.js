@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import { ReactComponent as CloseIcon } from '../assets/icons/close.svg';
-
 const Modal = props => {
   const { isModalOpen, onClose, children } = props;
   if (!isModalOpen) {

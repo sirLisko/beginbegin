@@ -1,43 +1,54 @@
-import MdPerson from "react-icons/lib/md/person";
+import MdPerson from 'react-icons/lib/md/person';
 
 export default {
-  name: "person",
-  title: "Person",
-  type: "document",
+  name: 'person',
+  title: 'Cast',
+  type: 'document',
   icon: MdPerson,
   liveEdit: false,
   fields: [
     {
-      name: "name",
-      title: "Name",
-      type: "string"
+      name: 'name',
+      title: 'Name',
+      type: 'string',
     },
     {
-      name: "image",
-      title: "Image",
-      type: "image",
+      name: 'role',
+      title: 'Role',
+      type: 'string',
+    },
+    {
+      name: 'image',
+      title: 'Headshot',
+      type: 'image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: "bio",
-      title: "Bio",
-      type: "array",
+      name: 'bio',
+      title: 'Bio',
+      type: 'array',
       of: [
         {
-          title: "Block",
-          type: "block",
-          styles: [{ title: "Normal", value: "normal" }],
-          lists: []
-        }
-      ]
-    }
+          title: 'Block',
+          type: 'block',
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: [],
+        },
+      ],
+    },
+    {
+      name: 'spotlight',
+      title: 'Spotlight',
+      type: 'url',
+    },
   ],
   preview: {
     select: {
-      title: "name",
-      media: "image"
-    }
-  }
+      title: 'name',
+      subtitle: 'role',
+      media: 'image',
+    },
+  },
 };

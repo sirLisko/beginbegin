@@ -7,6 +7,7 @@ import Hero from '../components/Hero';
 import Header from '../components/Header';
 import Shows from '../components/Shows';
 import Reviews from '../components/Reviews';
+import Production from '../components/Production';
 import Cast from '../components/Cast';
 import Contacts from '../components/Contacts';
 import Manifesto from '../components/Manifesto';
@@ -116,7 +117,9 @@ const IndexPage = props => {
       </div>
       <Reviews reviews={reviews[0].node.snippet} />
       <Shows shows={shows} />
-      <Cast cast={cast[0].node} />
+      <Production production={production[0].node} />
+      <Cast cast={cast} />
+      <Manifesto manifesto={manifesto[0].node} />
       <Contacts />
       <Footer />
     </>

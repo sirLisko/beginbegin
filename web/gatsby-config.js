@@ -21,6 +21,7 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true,
+        saveImages: true,
       },
     },
     `gatsby-plugin-sitemap`,
