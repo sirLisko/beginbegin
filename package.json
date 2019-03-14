@@ -1,6 +1,8 @@
 {
   "name": "beginbegin",
   "version": "0.1.0",
+  "description": "Website for the theatre company begin:begin",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/sirLisko/beginbegin.git"
