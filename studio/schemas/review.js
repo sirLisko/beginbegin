@@ -1,41 +1,41 @@
-import Icon from "react-icons/lib/md/grade";
+import Icon from 'react-icons/lib/md/grade';
 
 export default {
-  name: "review",
-  title: "Reviews",
-  type: "document",
+  name: 'review',
+  title: 'Reviews',
+  type: 'document',
   icon: Icon,
   fields: [
     {
-      name: "title",
-      title: "Title",
-      type: "string"
+      name: 'title',
+      title: 'Title',
+      type: 'string',
     },
     {
-      title: "Snippet",
-      name: "snippet",
-      type: "array",
+      title: 'Snippet',
+      name: 'snippet',
+      type: 'array',
       of: [
         {
-          type: "string"
-        }
-      ]
+          type: 'string',
+        },
+      ],
     },
     {
-      name: "startedAt",
-      title: "Started at",
-      type: "date"
-    }
+      name: 'startedAt',
+      title: 'Started at',
+      type: 'date',
+    },
   ],
   preview: {
     select: {
-      title: "title"
+      title: 'title',
     },
     prepare(data) {
       return {
         ...data,
-        title: data.title
+        title: data.title,
       };
-    }
-  }
+    },
+  },
 };
