@@ -1,7 +1,3 @@
-const {
-  api: { projectId, dataset },
-} = require('../studio/sanity.json');
-
 require('dotenv').config();
 
 module.exports = {
@@ -14,14 +10,20 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId,
-        dataset,
+        projectId: process.env.SANITY_ID,
+        dataset: 'production',
         // To enable preview of drafts, copy .env-example into .env,
         // and add a token with read permissions
         token: process.env.SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true,
         saveImages: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA,
       },
     },
     `gatsby-plugin-sitemap`,

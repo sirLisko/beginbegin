@@ -21,6 +21,7 @@
     "date-fns": "^1.30.1",
     "dotenv": "^6.2.0",
     "gatsby": "^2.1.31",
+    "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-postcss": "^2.0.6",
