@@ -6,6 +6,7 @@ import review from "./review";
 import siteSettings from "./siteSettings";
 import production from "./production";
 import show from "./show";
+import manifesto from './manifesto';
 
 export default createSchema({
   name: 'default',
@@ -13,9 +14,7 @@ export default createSchema({
     production,
     show,
     review,
-    siteSettings
-
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
-  ])
+    siteSettings,
+    manifesto,
+  ]),
 });
