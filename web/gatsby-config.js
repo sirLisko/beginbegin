@@ -1,4 +1,6 @@
-require('dotenv').config();
+require('dotenv').config({
+  path: `.env`,
+});
 
 module.exports = {
   siteMetadata: {
@@ -12,8 +14,6 @@ module.exports = {
       options: {
         projectId: process.env.SANITY_ID,
         dataset: 'production',
-        // To enable preview of drafts, copy .env-example into .env,
-        // and add a token with read permissions
         token: process.env.SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true,
