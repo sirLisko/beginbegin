@@ -23,7 +23,7 @@ class Cast extends Component {
               {cast.map(({ name, role }) => {
                 return (
                   <div
-                    style={{ cursor: 'pointer' }}
+                    className={styles.cast}
                     key={name}
                     onClick={() => {
                       const actorSelected = cast.find(c => c.name === name);

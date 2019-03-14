@@ -10,6 +10,13 @@
   }
 }
 
+.cast {
+  cursor: pointer;
+  &:hover {
+    background-color: #b1fc72;
+  }
+}
+
 .name {
   font-size: 2rem;
 }
