@@ -1,4 +1,4 @@
-import Icon from 'react-icons/lib/md/event';
+import Icon from 'react-icons/lib/fa/calendar-o';
 
 export default {
   name: 'show',

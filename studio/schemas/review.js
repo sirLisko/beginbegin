@@ -1,4 +1,4 @@
-import Icon from 'react-icons/lib/md/grade';
+import Icon from 'react-icons/lib/fa/trophy';
 
 export default {
   name: 'review',

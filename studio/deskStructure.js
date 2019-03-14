@@ -1,6 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder';
-import MdSettings from 'react-icons/lib/md/settings';
-import MdGroup from 'react-icons/lib/md/group';
+import IconSettings from 'react-icons/lib/fa/cog';
+import IconProduction from 'react-icons/lib/fa/bullhorn';
+import IconManifesto from 'react-icons/lib/fa/quote-left';
 
 const hiddenTypes = ['siteSettings', 'manifesto', 'production'];
 
@@ -16,7 +17,7 @@ export default () =>
             .schemaType('siteSettings')
             .documentId('siteSettings'),
         )
-        .icon(MdSettings),
+        .icon(IconSettings),
       S.listItem()
         .title('Manifesto')
         .child(
@@ -25,7 +26,7 @@ export default () =>
             .schemaType('manifesto')
             .documentId('manifesto'),
         )
-        .icon(MdGroup),
+        .icon(IconManifesto),
       S.listItem()
         .title('Production')
         .child(
@@ -34,7 +35,7 @@ export default () =>
             .schemaType('production')
             .documentId('production'),
         )
-        .icon(MdGroup),
+        .icon(IconProduction),
       ...S.documentTypeListItems().filter(
         listItem => !hiddenTypes.includes(listItem.getId()),
       ),

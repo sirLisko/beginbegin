@@ -1,10 +1,7 @@
-import Icon from 'react-icons/lib/md/group';
-
 export default {
   name: 'production',
   title: 'Production',
   type: 'document',
-  icon: Icon,
   fields: [
     {
       name: 'writer',

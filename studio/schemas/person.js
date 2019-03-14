@@ -1,10 +1,10 @@
-import MdPerson from 'react-icons/lib/md/person';
+import Icon from 'react-icons/lib/fa/star';
 
 export default {
   name: 'person',
   title: 'Cast',
   type: 'document',
-  icon: MdPerson,
+  icon: Icon,
   liveEdit: false,
   fields: [
     {

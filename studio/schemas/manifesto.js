@@ -1,10 +1,7 @@
-import MdPerson from 'react-icons/lib/md/person';
-
 export default {
   name: 'manifesto',
   title: 'Manifesto',
   type: 'document',
-  icon: MdPerson,
   liveEdit: false,
   fields: [
     {
