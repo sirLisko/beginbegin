@@ -234,10 +234,8 @@ h2 {
   border: none;
   padding: 0;
   background: none;
-  font-weight: bold;
-  font-size: 1rem;
 }
 .modal__close svg {
-  height: 10px;
-  width: 10px;
+  height: 2rem;
+  width: 2rem;
 }

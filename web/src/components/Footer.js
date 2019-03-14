@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoLogoInstagram } from 'react-icons/io';
 
 import styles from './Footer.module.css';
 
@@ -15,6 +16,15 @@ export default ({ title, subtitle }) => (
       <p>
         Photos by <b>Dawid Linkowski</b>, <b>Rachel Cole-Wilkin</b>,{' '}
         <b>Sebastian Gora</b>
+      </p>
+      <p>
+        <a
+          href="https://www.instagram.com/beginbegintheatre/"
+          alt="instagram"
+          target="_blank"
+        >
+          <IoLogoInstagram style={{ height: '3rem', width: '3rem' }} />
+        </a>
       </p>
     </div>
     <p className={styles.credits}>

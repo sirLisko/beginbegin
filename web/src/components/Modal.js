@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { IoIosClose } from 'react-icons/io';
 
 const Modal = props => {
   const { isModalOpen, onClose, children } = props;
@@ -10,7 +11,7 @@ const Modal = props => {
     <div className="modal__backdrop" onClick={onClose}>
       <div className="modal" onClick={e => e.stopPropagation()}>
         <button className="modal__close" onClick={onClose}>
-          X
+          <IoIosClose />
         </button>
         <div>{children}</div>
       </div>

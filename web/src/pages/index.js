@@ -55,6 +55,7 @@ export const query = graphql`
         node {
           name
           role
+          spotlight
           image {
             asset {
               fixed(width: 300) {

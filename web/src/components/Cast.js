@@ -67,6 +67,15 @@ class Cast extends Component {
                     <p key={i}>{b.children[0].text}</p>
                   ))}
               </div>
+              {actorSelected.spotlight && (
+                <a
+                  href={actorSelected.spotlight}
+                  alt="spotlight link"
+                  target="_blank"
+                >
+                  {actorSelected.spotlight}
+                </a>
+              )}
             </div>
           </Modal>
         )}
