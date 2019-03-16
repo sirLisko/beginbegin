@@ -28,12 +28,17 @@ body > div > div {
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 100%;
-  background-attachment: fixed;
+  background-attachment: scroll;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+@media (min-width: 450px) {
+  .box {
+    background-attachment: fixed;
+  }
 }
 .box div {
   max-width: 900px;
@@ -80,6 +85,11 @@ h2 {
   .box_2 {
     justify-content: space-around;
     align-items: flex-start;
+  }
+}
+@media (max-width: 449px) {
+  .box_2 {
+    background-position: -300px;
   }
 }
 
@@ -149,6 +159,11 @@ h2 {
 .box_9 {
   background-image: url('/imgs/DSCF4168.jpg');
 }
+@media (max-width: 449px) {
+  .box_9 {
+    background-position: right;
+  }
+}
 
 .box_5 {
   background-size: cover;
@@ -156,12 +171,18 @@ h2 {
   background-repeat: no-repeat;
   min-height: 100%;
   position: relative;
-  background-attachment: fixed;
+  background-attachment: scroll;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 450px) {
+  .box_5 {
+    background-attachment: fixed;
+  }
+}
+
 .box_5 > div {
   max-width: 900px;
   font-size: 2rem;
