@@ -34,8 +34,11 @@
     display: none;
   }
   position: relative;
-  height: 20px;
-  width: 25px;
+  cursor: pointer;
+  height: 25px;
+  width: 31px;
+  background: #b1fc72d9;
+  padding: 3px;
   & span,
   & span:after,
   & span:before {
@@ -70,21 +73,24 @@
   }
 }
 
-input:checked ~ .hamburger span {
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: rotate(45deg);
-}
-input:checked ~ .hamburger span:before {
-  top: 0;
-  transition: top 75ms ease, opacity 75ms ease 0.12s;
-  opacity: 0;
-}
-input:checked ~ .hamburger span:after {
-  bottom: 0;
-  transition: bottom 75ms ease,
-    transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-  transform: rotate(-90deg);
+.hamburger--open {
+  composes: hamburger;
+  & span {
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: rotate(45deg);
+  }
+  & span:before {
+    top: 0;
+    transition: top 75ms ease, opacity 75ms ease 0.12s;
+    opacity: 0;
+  }
+  & span:after {
+    bottom: 0;
+    transition: bottom 75ms ease,
+      transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+    transform: rotate(-90deg);
+  }
 }
 
 .links {
@@ -118,29 +124,31 @@ input:checked ~ .hamburger span:after {
       margin-left: 3rem;
     }
   }
+  & li:before {
+    content: '';
+    height: 100%;
+    width: 120%;
+    background-color: rgba(177, 252, 114, 0.85098);
+    position: absolute;
+    margin-left: -10%;
+    opacity: 0.9;
+    z-index: -1;
+    transform: rotate(-5deg);
+    top: 0;
+    left: 0;
+  }
+  & li:hover:before {
+    background-color: rgba(177, 252, 114);
+  }
   & a {
+    display: block;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.5rem;
   }
 }
-.links li:before {
-  content: '';
-  height: 100%;
-  width: 120%;
-  background-color: rgba(177, 252, 114, 0.85098);
-  position: absolute;
-  margin-left: -10%;
-  opacity: 0.9;
-  z-index: -1;
-  transform: rotate(-5deg);
-  top: 0;
-  left: 0;
-}
-.links li:hover:before {
-  background-color: rgba(177, 252, 114);
-}
-input:checked ~ .links {
+.links--open {
+  composes: links;
   top: 70px;
   transform: none;
 }

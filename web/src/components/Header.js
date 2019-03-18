@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link, animateScroll as scroll } from 'react-scroll';
 
@@ -24,16 +24,19 @@ const links = [
 ];
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className={styles.navigation} role="navigation">
-      <input id="menu-toggle" type="checkbox" />
       <a className={styles.logo} onClick={scroll.scrollToTop}>
         <img src="/imgs/logo.png" alt="logo" />
       </a>
-      <label className={styles.hamburger} htmlFor="menu-toggle">
+      <label
+        className={isOpen ? styles.hamburgerOpen : styles.hamburger}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <span />
       </label>
-      <ul className={styles.links}>
+      <ul className={isOpen ? styles.linksOpen : styles.links}>
         {links.map(l => (
           <li key={l.text}>
             <Link
@@ -43,6 +46,7 @@ const Header = () => {
               spy
               smooth
               duration={500}
+              onClick={() => setIsOpen(false)}
             >
               {l.text}
             </Link>
