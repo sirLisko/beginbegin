@@ -49,7 +49,7 @@ body > div > div {
 @media (min-width: 450px) {
   .box div {
     padding: 2rem;
-    background: #b1fc72d9;
+    background: var(--color-accent--transparent);
   }
 }
 h2 {
@@ -57,7 +57,7 @@ h2 {
 }
 @media (max-width: 449px) {
   h2 {
-    background: #b1fc72;
+    background: var(--color-accent);
   }
 }
 @media (min-width: 450px) {
@@ -67,7 +67,7 @@ h2 {
 }
 .box > div > div {
   transform: rotate(3deg);
-  background: #b1fc72d9;
+  background: var(--color-accent--transparent);
   margin-bottom: 1rem;
   padding: 2rem;
 }
@@ -95,7 +95,7 @@ h2 {
 
 .box_2 div {
   margin: 2rem;
-  background: #b1fc72d9;
+  background: var(--color-accent--transparent);
   padding: 2rem;
 }
 @media (min-width: 450px) {
@@ -110,6 +110,7 @@ h2 {
 }
 
 .box_3 span,
+.box_5 span,
 .box_6 span,
 .box_4 span {
   display: block;
@@ -192,7 +193,7 @@ h2 {
 }
 @media (min-width: 450px) {
   .box_5 > div {
-    background: #b1fc72d9;
+    background: var(--color-accent--transparent);
   }
 }
 .rotate {
@@ -207,7 +208,7 @@ h2 {
   }
 }
 .box_5 > div div div {
-  background: #b1fc72d9;
+  background: var(--color-accent--transparent);
   margin-bottom: 1rem;
   padding: 1rem;
   line-height: 1.25;
