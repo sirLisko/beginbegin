@@ -30,6 +30,7 @@ export const query = graphql`
           title
           when
           where
+          tickets
           startedAt
         }
       }
@@ -37,6 +38,7 @@ export const query = graphql`
     allSanityReview {
       edges {
         node {
+          title
           snippet
         }
       }
@@ -116,7 +118,10 @@ const IndexPage = props => {
           <div>{site.description}</div>
         </div>
       </div>
-      <Reviews reviews={reviews[0].node.snippet} />
+      <Reviews
+        title={reviews[0].node.title}
+        reviews={reviews[0].node.snippet}
+      />
       <Shows shows={shows} />
       <Production production={production[0].node} />
       <Cast cast={cast} />

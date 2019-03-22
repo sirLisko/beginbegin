@@ -81,6 +81,16 @@ h2 {
   font-size: 1.25rem !important;
 }
 
+.box_2 {
+  position: relative;
+}
+.box_2 > span {
+  position: absolute;
+  background-color: var(--color-accent--transparent);
+  bottom: 0;
+  right: 0;
+  padding: 0 0.5rem;
+}
 @media (min-width: 450px) {
   .box_2 {
     justify-content: space-around;

@@ -27,6 +27,11 @@ export default {
       type: 'date',
     },
     {
+      name: 'tickets',
+      title: 'Tickets',
+      type: 'string',
+    },
+    {
       name: 'note',
       title: 'Note',
       type: 'text',
