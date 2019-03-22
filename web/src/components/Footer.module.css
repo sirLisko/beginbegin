@@ -15,6 +15,11 @@
   & img {
     max-width: 250px;
   }
+  & svg {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-black);
+  }
 }
 .logo {
   background: rgba(255, 255, 255, 0.85098) !important;

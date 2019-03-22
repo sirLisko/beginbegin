@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoLogoInstagram } from 'react-icons/io';
+import { IoLogoInstagram, IoLogoFacebook } from 'react-icons/io';
 
 import styles from './Footer.module.css';
 
@@ -23,7 +23,14 @@ export default ({ title, subtitle }) => (
           alt="instagram"
           target="_blank"
         >
-          <IoLogoInstagram style={{ height: '3rem', width: '3rem' }} />
+          <IoLogoInstagram />
+        </a>
+        <a
+          href="https://www.facebook.com/beginbegintheatre"
+          alt="facebook"
+          target="_blank"
+        >
+          <IoLogoFacebook />
         </a>
       </p>
     </div>
