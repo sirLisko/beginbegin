@@ -54,13 +54,16 @@
   }
 }
 
-.next {
+.banner {
   position: absolute;
   bottom: 5vh;
   z-index: 100;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   font-size: 1.5rem;
+}
+
+.next {
   @media (--media-max-small) {
     display: none;
   }
@@ -82,5 +85,18 @@
       z-index: -1;
       transform: rotate(-5deg);
     }
+  }
+}
+
+.trailer {
+  background-color: rgba(177, 252, 114, 0.85098);
+  margin: 1rem auto -2rem;
+  padding: 0.5rem;
+  color: black;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }

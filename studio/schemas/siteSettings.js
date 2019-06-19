@@ -37,5 +37,10 @@ export default {
       title: 'Author',
       type: 'string',
     },
+    {
+      name: 'trailer',
+      title: 'Trailer',
+      type: 'string',
+    },
   ],
 };

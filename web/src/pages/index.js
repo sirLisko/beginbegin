@@ -23,6 +23,7 @@ export const query = graphql`
       subtitle
       description
       keywords
+      trailer
     }
     allSanityShow {
       edges {
